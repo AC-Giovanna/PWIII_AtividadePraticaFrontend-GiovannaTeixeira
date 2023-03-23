@@ -18,9 +18,19 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-//ROTAS INÍCIO
+//ROTAS - INÍCIO
 
-//ROTAS FIM
+//TAREFAS
+
+//Cadastro
+app.get('/CadastrarTarefa', (req, res) => {
+    res.render('tarefas/CadastrarTarefas');
+});
+
+//Listagem
+
+
+//ROTAS - FIM
 
 //Servidor
 app.listen(3001, () => {

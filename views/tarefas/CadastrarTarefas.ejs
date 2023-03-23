@@ -1,0 +1,81 @@
+<!--Importação do header-->
+<%- include('../partials/header') %>
+
+<body>
+    
+    <!--Importação do menu-->
+    <div class="container">
+
+        <%- include('../partials/menu') %>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Adicionar Tarefa</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form action="http://localhost:3000/CadastrarTarefa" method="post">
+
+                    <label for="titulo_tarefa"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="titulo_tarefa"
+                        id="titulo_tarefa"
+                        placeholder="Nome da Tarefa"
+                    >
+
+                    <label for="descricao_tarefa"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="descricao_tarefa"
+                        id="descricao_tarefa"
+                        placeholder="Descrição (opcional)"
+                    >
+
+                    <label for="prazo_tarefa"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="prazo_tarefa"
+                        id="prazo_tarefa"
+                        placeholder="Data do Prazo (opcional)"
+                    >
+
+                    <label for="dificuldade_tarefa (opcional)"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="dificuldade_tarefa"
+                        id="dificuldade_tarefa"
+                        placeholder="Dificuldade da Tarefa (opcional)"
+                    >
+
+                    <label for="recompensa_tarefa"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="recompensa_tarefa"
+                        id="recompensa_tarefa"
+                        placeholder="Recompensa (opcional)"
+                    >
+
+                    <button class="btn btn-success mt-2">Adicionar</button>
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<!--Importação do footer-->
+<%- include('../partials/footer') %>

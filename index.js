@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-//Rotas de acesso às páginas ejs
+//Rota de acesso às páginas ejs
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -28,11 +28,22 @@ app.get('/CadastrarTarefa', (req, res) => {
 });
 
 //Listagem
+app.get('/ListarTarefas', (req, res) => {
+    // Requisição para o backend pelo axios
+    const urlListarTarefas = 'http://localhost:3000/ListarTarefas';
 
+    axios.get(urlListarTarefas)
+    .then((response) => {
+        console.log(response.data);
+
+        let tarefas = response.data;
+        res.render('tarefas/ListarTarefas', {tarefas});
+    });
+});
 
 //ROTAS - FIM
 
 //Servidor
 app.listen(3001, () => {
-    console.log('Servicor rodando em http://localhost:3001')
+    console.log('Servidor rodando em http://localhost:3001')
 });

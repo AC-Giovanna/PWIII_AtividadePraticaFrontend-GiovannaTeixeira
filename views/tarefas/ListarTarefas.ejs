@@ -10,16 +10,16 @@
         <div class = "card-header">Todas as Tarefas</div>
     </div>
 
-    <% tarefas.data.forEach(tarefas=>{ %>
+    <% tarefas.data.forEach(tarefa=>{ %>
 
         <div class = "card mt-2 p-1">
             
             <div class = "card-body">
-                <%= tarefas.titulo_tarefa %>
+                <%= tarefa.titulo_tarefa %>
             </div>
 
             <div class="btn-group mr-2">
-                <a href="#" class="btn btn-success btn-sm mr-2 ml-2">Editar</a>
+                <a href="/EditarTarefa/<%= tarefa.id_tarefa %>" class="btn btn-success btn-sm mr-2 ml-2">Editar</a>
                 <a href="#" class="btn btn-danger btn-sm mr-2 ml-2">Excluir</a>
             </div>
 

@@ -41,6 +41,29 @@ app.get('/ListarTarefas', (req, res) => {
     });
 });
 
+//Edição
+app.get('/EditarTarefa/:id_tarefa', (req, res) => {
+    
+    let {id_tarefa} = req.params;
+    urlListarTarefaPK = `http://localhost:3000/ListarTarefaPK/${id_tarefa}`;
+
+    axios.get(urlListarTarefaPK)
+    .then((response) => {
+        let tarefa = response.data;
+        console.log(tarefa.data);
+        res.render('tarefas/EditarTarefa', {tarefa})
+    })
+});
+app.post('/EditarTarefa', (req, res) => {
+    let urlEditar = 'http://localhost:3000/AlterarTarefa';
+
+    axios.put(urlEditar, req.body)
+    .then((response) => {
+        //res.redirect('/ListarTarefas');
+        console.log('AAAAAAAAAA');
+    })
+})
+
 //ROTAS - FIM
 
 //Servidor

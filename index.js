@@ -50,17 +50,18 @@ app.get('/EditarTarefa/:id_tarefa', (req, res) => {
     axios.get(urlListarTarefaPK)
     .then((response) => {
         let tarefa = response.data;
-        console.log(tarefa.data);
+        // console.log(tarefa.data);
         res.render('tarefas/EditarTarefa', {tarefa})
     })
 });
 app.post('/EditarTarefa', (req, res) => {
-    let urlEditar = 'http://localhost:3000/AlterarTarefa';
+    let {id_tarefa} = req.params;
+    const urlEditarTarefa = `http://localhost:3000/AlterarTarefa/${id_tarefa}`;
 
-    axios.put(urlEditar, req.body)
+    axios.put(urlEditarTarefa, req.body)
     .then((response) => {
         //res.redirect('/ListarTarefas');
-        console.log('AAAAAAAAAA');
+        console.log(response); 
     })
 })
 

@@ -1,0 +1,70 @@
+<!--Importação do header-->
+<%- include('../partials/header') %>
+
+<body>
+    
+    <!--Importação do menu-->
+    <div class="container">
+
+        <%- include('../partials/menu') %>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Cadastrar Jogador</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form action="http://localhost:3000/CadastrarJogador" method="post">
+
+                    <label for="nome_usuario"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="nome_usuario"
+                        id="nome_usuario"
+                        placeholder="Nome do Jogador"
+                    >
+
+                    <label for="email_usuario"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="email_usuario"
+                        id="email_usuario"
+                        placeholder="E-mail"
+                    >
+
+                    <label for="senha_usuario"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="senha_usuario"
+                        id="senha_usuario"
+                        placeholder="Senha"
+                    >
+
+                    <label for="pronome_usuario"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="pronome_usuario"
+                        id="pronome_usuario"
+                        placeholder="Pronomes"
+                    >
+
+                    <button class="btn btn-success mt-2">Cadastrar</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<!--Importação do footer-->
+<%- include('../partials/footer') %>

@@ -17,15 +17,19 @@
             <div class = "card-body">
                 <%= tarefa.titulo_tarefa %>
             </div>
+            
+            <div class = "card-body">
+                <%= tarefa.descricao_tarefa %>
+            </div>
 
             <div class="btn-group mr-2">
                 <a href="/EditarTarefa/<%= tarefa.id_tarefa %>" class="btn btn-success btn-sm mr-2 ml-2">Editar</a>
-                <a href="#" class="btn btn-danger btn-sm mr-2 ml-2">Excluir</a>
+                <a href="/ExcluirTarefa/<%= tarefa.id_tarefa %>" class="btn btn-danger btn-sm mr-2 ml-2">Excluir</a>
             </div>
 
         </div>
 
-    <% }) %>
+    <% }); %>
     
     </div>
 

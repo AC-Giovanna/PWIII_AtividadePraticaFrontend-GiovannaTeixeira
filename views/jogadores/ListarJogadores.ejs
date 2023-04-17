@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+
+<body>
+
+    <div class="container">
+    
+        <%- include('../partials/menu') %>
+
+    <div class = "card">
+        <div class = "card-header">Todas os Jogadores</div>
+    </div>
+
+    <% jogadores.data.forEach(jogador=>{ %>
+
+        <div class = "card mt-2 p-1">
+            
+            <div class = "card-body">
+                <%= jogador.nome_usuario %>
+            </div>
+            <div class = "card-body">
+                <%= jogador.email_usuario %>
+            </div>
+
+            <div class="btn-group mr-2">
+                <a href="#" class="btn btn-success btn-sm mr-2 ml-2">Editar</a>
+                <a href="#" class="btn btn-danger btn-sm mr-2 ml-2">Excluir</a>
+            </div>
+
+        </div>
+
+    <% }); %>
+    
+    </div>
+
+</body>
+
+<%- include('../partials/footer') %>

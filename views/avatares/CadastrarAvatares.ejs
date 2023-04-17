@@ -1,0 +1,79 @@
+<!--Importação do header-->
+<%- include('../partials/header') %>
+
+<body>
+    
+    <!--Importação do menu-->
+    <div class="container">
+
+        <%- include('../partials/menu') %>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Criar Avatar</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form action="http://localhost:3000/CadastrarAvatar" method="post">
+
+                    <label for="nome_avatar"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="nome_avatar"
+                        id="nome_avatar"
+                        placeholder="Nome do Avatar"
+                    >
+                    
+                    <label for="descricao_avatar"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="descricao_avatar"
+                        id="descricao_avatar"
+                        placeholder="Descrição"
+                    >
+
+                    <label for="vida_avatar"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="vida_avatar"
+                        id="vida_avatar"
+                        placeholder="HP do Avatar"
+                    >
+
+                    <label for="dinheiro_avatar"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="dinheiro_avatar"
+                        id="dinheiro_avatar"
+                        placeholder="Moedas"
+                    >
+
+                    <label for="genero_avatar"></label>
+                    <input 
+                        class="form-control"
+                        type="text"
+                        name="genero_avatar"
+                        id="genero_avatar"
+                        placeholder="Gênero do Avatar"
+                    >
+
+                    <button class="btn btn-success mt-2">Salvar</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<!--Importação do footer-->
+<%- include('../partials/footer') %>
